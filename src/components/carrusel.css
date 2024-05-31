@@ -1,0 +1,170 @@
+.present {
+    max-width: 1366px;
+    width: 100%;
+   
+    height: auto;
+    margin-top: 65px;
+    overflow: hidden; /* Oculta los elementos que están fuera del área visible */
+    position: relative; /* Necesario para el posicionamiento absoluto de los slides */
+  
+    
+}
+
+.present-container {
+   
+    display: flex;
+    flex-direction: row; /* Cambia a row para alinear horizontalmente */
+    width: 100%; 
+     /* Ancho máximo del contenedor */
+    transition: transform 0.5s ease-in-out; /* Animación suave para el cambio de slides */
+}
+
+.present-container-div {
+    flex: 0 0 100%; /* Cada slide ocupa 100% del ancho del contenedor */
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.present-container-div-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 100vh;
+    padding-left: 5%;
+    
+}
+
+.present-container-div-text h1 {
+    font-size: 4rem;
+    color: #0c1445;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+}
+
+.present-container-div-text p {
+    font-size: 1.5rem;
+    color: #0c1445;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.present-container-div-img {
+    display: flex;
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.present-container-div-img img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+@media (max-width: 480px){
+    .present {
+        
+        height: auto;
+        width: 100%;
+        
+      
+        margin-top: 95px;
+        
+       
+  }
+  .present-container{
+
+    height: auto;
+   
+    justify-content: flex-start;
+        align-items: flex-start;
+      
+    
+  }
+    .present-container-div {
+        
+        flex-direction: column;
+        height: 42rem;
+        
+        
+       
+     
+    }
+    
+
+    .present-container-div-text {
+        
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50%;
+        padding-left: 0%;
+        padding: 1.5rem;
+      
+       
+       
+        align-content: center;
+     
+    }
+    
+    .present-container-div-text h1 {
+        font-size: 2.5rem;
+        text-align:center;
+      
+      
+      
+      
+       
+      
+    }
+    
+    .present-container-div-text p {
+        font-size: 1.2rem;
+        width: 80%;
+        text-align:center;
+        margin-top: 1rem;
+        
+       
+     
+    
+        
+    }
+    
+    .present-container-div-img {
+        
+        width: 100%;
+        height: 50%;
+       justify-content: center;
+       align-items: center;
+       align-content: center;
+       
+        padding: 0rem;
+        
+     
+       
+       
+       
+      
+    }
+    
+    .present-container-div-img img {
+            
+            width: 100%;
+            height: auto;
+            padding-bottom:4rem ;
+          
+            
+       
+    }
+
+    
+}

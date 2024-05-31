@@ -1,0 +1,61 @@
+---
+import './carrusel.css';
+
+interface slidesCarrusel {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  body: string;
+ 
+ 
+}
+
+interface Props {
+  slides: slidesCarrusel[];
+}
+
+const { slides } = Astro.props as Props;
+---
+
+<section class="present">
+  <div class="present-container">
+    {slides.map((slidesCarrusel, index) => (
+      <div class="present-container-div" class:list={[index === 0 ? 'active' : '']}>
+        <div class="present-container-div-text">
+          <h1>{slidesCarrusel.title}</h1>
+          <p>{slidesCarrusel.body}</p>
+        </div>
+        <div class="present-container-div-img">
+          <img src={slidesCarrusel.imageSrc} alt={slidesCarrusel.imageAlt} />
+        </div>
+      </div>
+     
+    ))}
+  </div>
+</section>
+
+<script>
+  function initializeCarousel() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.present-container-div') as NodeListOf<HTMLElement>;
+      let currentIndex = 0;
+  
+      function showSlide(index: number) {
+        const slideWidth = slides[0].clientWidth;
+        const presentContainer = document.querySelector('.present-container') as HTMLElement;
+        if (presentContainer) {
+          presentContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+      }
+  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+  
+      setInterval(nextSlide, 6000); // Cambia cada 5 segundos
+    });
+  }
+  initializeCarousel();
+</script>
+

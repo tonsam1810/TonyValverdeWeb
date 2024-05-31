@@ -1,0 +1,40 @@
+---
+import './indexService.css';
+
+interface slidesServices {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  body: string;
+ 
+ 
+}
+
+interface Props {
+  slides: slidesServices[];
+}
+
+const { slides } = Astro.props as Props;
+---
+
+<section class="services">
+    <h2>
+        Servicios
+    </h2>
+    <div class="services-container">
+        {slides.map((slidesServices, index) => (
+        <div class="service">
+            <div class="service-img">
+                <img src={slidesServices.imageSrc} alt={slidesServices.imageAlt} />
+            </div>
+            <div class="service-text">
+                <h3>{slidesServices.title}</h3>
+                <p>{slidesServices.body}</p>
+            </div>
+
+        </div>
+          ))}
+
+    </div>
+
+</section>

@@ -1,0 +1,34 @@
+---
+import './indexProyectos.css';
+
+interface slidesServices {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  body: string;
+ 
+ 
+}
+
+interface Props {
+  slides: slidesServices[];
+}
+
+const { slides } = Astro.props as Props;
+---
+<section class="proyectos">
+    <h2>Proyectos y experiencia</h2>
+    <div class="proyectos-container" >
+        {slides.map((slidesServices, index) => (
+        <div class="proyecto">
+            <div class="proyecto-img">
+                <img src={slidesServices.imageSrc} alt={slidesServices.imageAlt} />
+            </div>
+            <div class="proyecto-info">
+                <h3>{slidesServices.title}</h3>
+                <p>{slidesServices.body}</p>
+            </div>
+        </div>   ))}
+    </div>
+
+</section>

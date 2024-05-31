@@ -1,0 +1,57 @@
+.services {
+    padding: 20px;
+  
+    max-width: 1366px;
+    width: 100%;
+
+    
+}
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
+    justify-content: space-between; /* Distribuye los elementos con espacio homogéneo entre ellos */
+
+    padding: 1rem;
+  
+   
+}
+.services h2 {
+    font-size: 3rem;
+    color:#0c1445;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.service {
+    flex: 1 1 calc(25% - 20px); /* Cada servicio ocupa el 25% menos 20px (ajustar según el número de servicios) */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+    margin: 10px; /* Espaciado entre los elementos */
+    /* Ejemplo de borde */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 1rem;
+    min-width: 200px; /* Mínimo ancho para un servicio */
+    background-color: white;
+  
+    
+}
+.service-img img {
+    max-width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 1rem;
+}
+.service-text{
+    padding: 0.9rem;
+    color:  #0c1445;
+}
+.service-text h3 {
+    font-size: 1.19rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.service-text p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}

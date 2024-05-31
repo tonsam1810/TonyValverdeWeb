@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Carousel from '../components/carrusel.astro'; 
+import Navbar from '../components/Navbar.astro';// Importa el componente del carrusel
+import Services from '../components/indexService.astro';// Importa el componente de servicios
+import Proyectos from '../components/indexProyectos.astro';// Importa el componente de proyectos
+import Contactame from '../components/indexContactame.astro';// Importa el componente de proyectos
+import Navbar2 from '../components/Navbar2.astro';
+
+// Define los slides para el carrusel
+const slidesServices = [
+  {
+    imageSrc: '../../public/img/desingweb.jpg',
+    imageAlt: 'Desarrollo de Páginas Web',
+    title: 'Diseño y desarrollo de paginas web',
+    body: 'Diseño y desarrollo de sitios web personalizados, optimizados para SEO y responsivos para todos los dispositivos.',
+  },
+  {
+    imageSrc: '../../public/img/ecomerce1.jpg',
+    imageAlt: 'Desarrollo de Aplicaciones Móviles y Web',
+    title: 'Creacion de tiendas ecomerce ',
+     body: 'Diseño y desarrollo de sitios web personalizados, optimizados para SEO y responsivos para todos los dispositivos.', 
+  },
+  {
+    imageSrc: '../../public/img/app-web-movil.jpg',
+    imageAlt: 'Soporte TI | Reparación de Computadoras',
+    title: 'Desarrollo de aplicaciones de negocio ',
+    body: 'Creación de aplicaciones móviles intuitivas y eficientes para web y Android, adaptadas a las necesidades de tu negocio.',
+   
+  },
+  {
+    imageSrc: '../../public/img/supportTI.jpg',
+    imageAlt: 'Soporte TI | Reparación de Computadoras',
+    title: 'Soporte Informatico (TI) ',
+    body: 'Ofrecemos soporte técnico integral, mantenimiento de sistemas y soluciones a problemas informáticos tanto locales como remotos.',
+   
+  }
+];
+const slidesCarrusel = [
+  {
+    imageSrc: '../../public/img/carrusel1.png',
+    imageAlt: 'Desarrollo de Páginas Web',
+    title: 'Desarrollo de Páginas Web',
+    body: 'Creación de sitios web personalizados y responsivos',
+  },
+  {
+    imageSrc: '../../public/img/carrusel2.png',
+    imageAlt: 'Desarrollo de Aplicaciones Móviles y Web',
+    title: 'Desarrollo de Aplicaciones Web y Móviles ',
+     body: 'Aplicaciones innovadoras para tu negocio', 
+  },
+  {
+    imageSrc: '../../public/img/carrusel3.png',
+    imageAlt: 'Soporte TI | Reparación de Computadoras',
+    title: 'Soporte TI | Reparación de Computadoras',
+    body: 'Soluciones técnicas para tus necesidades informáticas',
+   
+  }
+];
+const slidesProyectos = [
+  {
+    imageSrc: '../../public/img/proyecto1.png',
+    imageAlt: 'digitalrent',
+    title: 'Sistema de gestion de alquiler de inmuebles DigitalRent',
+    body: 'Desarrollado con Angular y Springboot',
+  },
+  {
+    imageSrc: '../../public/img/proyecto2.png',
+    imageAlt: 'Alurageek',
+    title: 'Tienda de consolas y articulos de videojuegos AluraGeek ',
+     body: 'Description of your work', 
+  },
+  {
+    imageSrc: '../../public/img/proyecto3.png',
+    imageAlt: 'Apepperia',
+    title: 'Pagina profesional Apepperia',
+    body: 'Description of your work',
+  }
+  ,
+  {
+    imageSrc: '../../public/img/proyecto4.png',
+    imageAlt: 'Calcuruleta',
+    title: 'Pagina Calculadora de probabilidades para ruleta',
+    body: 'Description of your work',
+   
+  }
+];
+
+
+
+
+---
+
+<Layout>
+	<Navbar/>
+  <main>
+	
+    {/* Coloca el carrusel dentro del contenido principal */}
+    <Carousel slides={slidesCarrusel} />
+    <Services slides={slidesServices} />
+    <Proyectos slides={slidesProyectos} />
+    <Contactame/>
+    <Navbar2/>
+  </main>
+  <style>
+    body{
+      background-color: rgb(252, 247, 247);
+    }
+  </style>
+</Layout>
